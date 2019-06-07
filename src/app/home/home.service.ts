@@ -20,20 +20,21 @@ export class HomeService {
           'https://peer-assist.firebaseio.com/notifications.json',
         )
         .subscribe((response) => {
+// tslint:disable-next-line: forin
           for (var j in response) {
             const newNotification = new Notification(
               j,
               response[j].title,
               response[j].description,
               response[j].image
-            )
-            console.log(newNotification);
-
+            );
+            this._notifications.push(newNotification);
             }
         });
+        return this._notifications;
         }
 get notifications() {
-  console.log([...this._notifications]);
+  // console.log([...this._notifications]);
   // console.log([...this.newNotification]);
   return [...this._notifications];
 }
