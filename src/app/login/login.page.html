@@ -10,7 +10,17 @@
   </ion-header>
 
 <ion-content padding>
+  <div>
+  <ion-row>
   <ion-label>CSULB ID</ion-label><input type="text">
+  </ion-row>
+  <ion-row>
   <ion-label>Password</ion-label><input type="password">
+  </ion-row>
+  <ion-row>
+  <ion-button (click) = "setAdvisee()">Advisee</ion-button>
+  <ion-button (click) = "setAdvisor()">Advisor</ion-button>
+  </ion-row>
   <ion-button (click) = "goHome()">Sign In</ion-button>
+</div>
 </ion-content>

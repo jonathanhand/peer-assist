@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeService {
 
+// tslint:disable-next-line: variable-name
       private _notifications: Notification[] = [
           new Notification(
               'n2',
@@ -21,7 +22,7 @@ export class HomeService {
         )
         .subscribe((response) => {
 // tslint:disable-next-line: forin
-          for (var j in response) {
+          for (const j in response) {
             const newNotification = new Notification(
               j,
               response[j].title,

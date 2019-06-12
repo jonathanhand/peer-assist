@@ -11,8 +11,8 @@ export class HomePage implements OnInit {
   loadedNotifications: Notification[];
   constructor(private homeService: HomeService) {}
   ngOnInit() {
-    this.loadedNotifications = this.homeService.getPlace(); //calls get service in home.service
-    console.log(this.loadedNotifications)
+    this.loadedNotifications = this.homeService.getPlace(); // calls get service in home.service
+    console.log(this.loadedNotifications);
 
   }
 }
